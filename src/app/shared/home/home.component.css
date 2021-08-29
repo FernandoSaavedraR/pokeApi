@@ -1,19 +1,27 @@
 header{
     height:100%;
     margin:1rem;
+    box-sizing: border-box;
 }
 .textos-header{
     width:100%;
+    position: relative;
+
 
 }
 h1{
     font-size:80px;
     margin:0;
+    z-index: 10;
 }
 h2{
     font-size:20px;
     margin-bottom: 20px;
     text-align: center;
+    z-index: 10;
+}
+button{
+    z-index: 10;
 }
 
 header img{
@@ -30,9 +38,20 @@ header img{
     position: absolute;
     bottom: 0;
 }
+
 @media (max-width: 1000px) {
     .image-container img{
         display:none;
     }
+    button{
+        width: 100%;
+    }
   }
-  
+@media (max-width:380px){
+    .image-container img{
+        display:none;
+    }
+    button{
+        width: 100%;
+    }
+}
