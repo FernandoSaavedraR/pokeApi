@@ -4,6 +4,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
 import { PasswordModule } from 'primeng/password';
 import { TabViewModule } from 'primeng/tabview';
+import {DialogModule} from 'primeng/dialog';
 import {CardModule} from 'primeng/card';
 @NgModule({
   declarations: [],
@@ -11,6 +12,7 @@ import {CardModule} from 'primeng/card';
   exports: [
     ButtonModule,
     CardModule,
+    DialogModule,
     InputTextModule,
     MenubarModule,
     PasswordModule,

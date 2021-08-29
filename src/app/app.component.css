@@ -1,5 +1,8 @@
 .container {
   height: 100vh;
+  margin: 0;
+  padding: 0;
+
 }
 .landing {
   height: calc(100% - 100px);

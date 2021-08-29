@@ -23,6 +23,9 @@
 .inputForm{
     width: 100%;
 }
+.p-password-panel{
+    width: 100%;
+}
 button{
     width: 100%;
 }
@@ -35,7 +38,7 @@ button{
     text-decoration: underline;
 }
 
-@media (max-width:500px){
+@media screen and (max-width:500px){
     .login-box img{
         display: none;
     }
@@ -43,4 +46,11 @@ button{
         width:320px;
         height: 320px;
     }
+}
+@media screen and (max-height:400px){
+    .login-box{
+        width:320px;
+        height: 320px;
+    }
+    
 }

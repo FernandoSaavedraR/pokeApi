@@ -4,20 +4,22 @@
   </div>
   <div class="login-form">
     <h1>Login Here</h1>
-    <form action="">
+    <form [formGroup]="loginForm">
       <!-- username -->
       <div class="col-12 flex justify-content-center">
         <input
           type="text"
           class="inputForm"
           placeholder="Username"
+          formControlName="usuario"
           pInputText
         />
       </div>
-      <div class="col-12 flex justify-content-center">
+      <div class="col-12 flex justify-content-center align-items-center">
         <input
-          type="password"
+          [type]="showPassword?'text':'password'"
           placeholder="Password"
+          formControlName="password"
           pPassword
           [feedback]="false"
           class="inputForm"
@@ -26,17 +28,29 @@
       <div class="col-12">
         <button
           pButton
+          pRipple
           type="button"
-          label="Log In"
-          class="p-button-success flex"
+          label="Mostrar contraseña"
+          class="p-button-info p-button-text"
+          (click)="show()"
         ></button>
       </div>
       <div class="col-12">
-        <a href="#"> Lost your Password </a>
+        <button
+          pButton
+          type="button"
+          label="Log In"
+          class="p-button-success flex"
+          (click)="login()"
+        ></button>
       </div>
       <div class="col-12">
-        <a href="#"> Don't have account? </a>
+        <a href="#"> Don't have an account? </a>
       </div>
     </form>
   </div>
+
 </section>
+<p-dialog header="Revise sus campos" [(visible)]="display">
+  No se ha podido iniciar sesión, revise sus campos
+</p-dialog>
