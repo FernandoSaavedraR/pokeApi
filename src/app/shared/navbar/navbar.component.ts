@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { AuthService } from '../../auth/services/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -9,7 +10,7 @@ import { AuthService } from '../../auth/services/auth.service';
 export class NavbarComponent implements OnInit {
   items: MenuItem[] = [];
   private _logged: boolean = false;
-  constructor( private authService:AuthService) {}
+  constructor( private authService:AuthService,private router:Router) {}
 
   get logged(): boolean {
     return this._logged;
@@ -51,5 +52,10 @@ export class NavbarComponent implements OnInit {
         routerLink: ['./pokemon', 'berries'],
       },
     ];
+  }
+  logout(){
+    console.log('logout')
+    this.authService.logout();
+    this.router.navigate(['./'])
   }
 }
